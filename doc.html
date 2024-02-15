@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Doc</title>
+        <link rel="stylesheet" href="style/style.css">
+    </head>
+    <body>
+        <div id="page">
+        <ul id="nav">
+            <li><a href="about.html">About</a></li>
+            <li><a href="doc.html">Docs</a></li>
+            <li><a href="index.html">Game</a></li>
+        </ul>
+      
+        <h1>Documentation</h1>
+
+        <h2>Inspiration</h2>
+        <p>Growing up, dress up games were my favorite genre of games so I had made this project as a tribute to my younger self.</p>
+
+        <section id="mockup">
+        <h2>Mockups</h2>
+        <h3>Home Page</h3>
+        <img src ="images/homepage.png" alt="homepage mockup">
+        <h3>Game Window</h3>>
+        <img src ="images/dress-up.png" alt ="game's mockup">
+        <h3>Game Over</h3>>
+        <img src="images/game-over.png" alt="game over mockup">    
+    </section>
+
+        <h2>Key Takeways</h2>
+        <p>This was my favorite project to work for 235. It taught me how to read documentation, search answers through StackOverflow and take user feedback. I personally enjoyed working on it as PIXI is easy to grasp and implement.</p>
+        <p>Luckily most of my stretch goals that I had initially laid out, I was able to complete them.</p>
+        
+        <article id="extra-work">
+        <h2>How Did I Go Above and Beyond?</h2>
+        <p>Initially, I had planned it as a drag and drop game but I wanted to get out of my comfort zones. For that I had implemented, buttons, click on effect and music that player can stop and play anytime.</p>
+        <ol>
+            <li>Button <p>I had used my texts as buttons and connected them to their respective interractions.</p>
+            </li>
+
+            <li>Click on effect
+                <p>To be able to achieve this, I had made a new class for these objects with functions like SetVisible() and SetInvisible() to make my life easier when I had called them in reset or ClickOnItem function.
+                    It was challenging as I wanted to make sure that the function would not repeat items but loop through them without ever showing two items at once. For that I had used a global variable called counter which would automatically be set to zero if the previous text it was called on was not the same as the current text.
+                </p>
+            </li>
+
+            <li>Background Music
+                <p>Finding out that PIXI does not support music but just sound effects took me a while. Hence with Howler, I had made a function that checked if music button was pressed once. If not, then it would play music else it would stop. This helped me avoid playing multiple music with the same button.</p></li>
+        </ol>
+        </article>
+
+        <h2>Challenges</h2>
+        <ol>
+            <li>Loading Textures
+                <p>
+                    When I was working on making its prototype, the biggest issue I had faced was to make PIXI load textures for it.
+                    I was not able to find why it did not work but I had later found a tutorial which helped me out solve the issue.
+            </p></li>
+
+            <li>Using Click On Items 
+                <p>In some of the dress games, I had played, the user could change outfits using clicking the buttons.
+                    It was challenging to implemenent as often times my code would either break or two items would be shown on the mannequinn.
+                    To fix this issue, I had used modulus instead which ensured that each time user would click it, only a new item would appear and previous one would disapper.
+                </p>
+            </li>
+
+            <li>Making classes
+                <p>Even though, I had worked with classes using Circle Blast, it took me a while to grasp the concept. PIXI's documentation was incredibly helpful in helping me understand how to load my assets and make them objects to make my code more readable.</p>
+            </li>
+
+            <li>Adding a Background Music
+                <p>Initially, I had used PIXI.sounds to import my music however after looking it up, I found out that Howler is used instead. So, all my sounds are handled by Howler.</p></li>
+        </ol>
+
+        <h2>Feedback on Prototype</h2>
+        <ol>            
+            <li>Game window to big for the browser screen
+                <p>As I had building it on Mozilla, I did not realize how big the game really looked like. This critique helped me improve my user accessibilty.</p>
+            </li>
+
+            <li>Textures Anchor Point issue
+                <p>At first, users were able to drag it from the top right corner of the image which was technically outside the image. This feedback helped me set anchor points</p>
+            </li>
+
+            <li>Add More Clothing Options
+                <p>Since, it was a demo, I had added two pairs of tops and bottoms but this helped me keep in mind for the amount of clothing I would add in future.</p>
+            </li>
+
+            <li>Girl Aesthetic
+                <p>The Prototype had used black and red as its primary colors which are not the colors you see little girls attracted to. So, I had taken Barbie as an inspiration for my aesthetic of the game and the outfits.</p>
+            </li>
+
+            <li>Making user being able to layer in the game
+                <p>After incorporating all the other reviews from my classmates and professor August Zinner, I was showing it to my friend who had suggested me to allow players to be able to layer in the game. Although, I had ran out of time to implement this feature but this is something I would work on during break.</p>
+            </li>
+        </ol>
+
+
+        <h2>References</h2>
+        <h3>Coding</h3>
+        <ol>
+            <li><a href="https://stackoverflow.com/questions/42880090/a-better-way-to-space-out-navigation-bar-items">Navbar</a></li>
+            <li><a href="https://stackoverflow.com/questions/30554533/dynamically-resize-the-pixi-stage-and-its-contents-on-window-resize-and-window">How to make PIXI Canvas Responsive</a></li>
+            <li><a href="https://pixijs.download/dev/docs/index.html">Pixi Documentation</a><p>
+                I had used it to get an idea of what interractions can I use for player interractions.
+            </p></li>
+
+            <li><a href = "../HW-pixi-game-start/HW-pixi-game-start/game.html">Circle Blast code</a>
+            <p>I had used it as a guide with how music and classes can be made.</p></li>
+            
+            <li><a href="https://www.youtube.com/watch?v=qszOcKGS1R4">Dragging Tutorial</a>
+                    <p>This was another YouTuber that I had refered to, as I struggled with how dragging actually works in PIXI.</p></li>
+                    
+            <li><a href="https://codewithstein.com/how-to-drag-and-drop-pixijs/">Blog on how Dragging works</a>
+            <p>I had refered it to get some idea with how I could have used PIXI to make dragging work</p></li>
+        
+            <li><a href="https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-and-animations-with-pixijs">Textures</a>
+            <p>When I had first started my code would not be able to load textures, hence it was helpful in making them work.</p></li>
+        </ol>
+        
+        <h3>Assets</h3>
+        <p>Since this game required specific sizes of clothing for the mannequin, I had made the mannequin, clothes and shoes using Photoshop.</p>
+
+        <h3>Music</h3>
+        <p>For music I had relied on freesound.org</p>
+        <ol>
+            <li><a href="https://freesound.org/people/Mrthenoronha/sounds/506893/">Background Music</a></li>
+            <li><a href="https://freesound.org/people/pbimal/sounds/534103/">Mouse CLick</a></li>
+        </ol>
+
+        <h3>Fonts used</h3>
+        <ol>
+            <li><a href="https://fonts.google.com/specimen/Lilita+One?query=Lilit">Lilita One</a></li>
+            <li><a href="https://learn.microsoft.com/en-us/typography/font-list/lucida-sans">Lucida Sans</a></li>
+        </ol>
+
+        <h3>Citations</h3>
+        <ul>
+            <li>alib-ms. (n.d.). Lucida Sans font family. Microsoft.com. Retrieved December 16, 2023, from https://learn.microsoft.com/en-us/typography/font-list/lucida-sans
+            </li>
+            <li>Lilita One. (n.d.). Google Fonts. Retrieved December 16, 2023, from https://fonts.google.com/specimen/Lilita+One?query=Lilit
+            </li>
+            <li>Mouse-click-single-00.Flac. (n.d.). Freesound.org. Retrieved December 16, 2023, from https://freesound.org/people/pbimal/sounds/534103/
+            </li>
+            <li>Wav, U. T. L. (n.d.). Upbeat theme loop.Wav. Freesound.org. Retrieved December 16, 2023, from https://freesound.org/people/Mrthenoronha/sounds/506893/
+            </li>
+            <li>Löw, A. (2023, October 18). How to create sprite sheets & animations for PixiJS 7. Codeandweb.com. https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-and-animations-with-pixijs
+            </li>
+            <li>Stein, C. W. (n.d.). How to drag and drop. Codewithstein.com. Retrieved December 16, 2023, from https://codewithstein.com/how-to-drag-and-drop-pixijs/
+            </li>
+            <li>
+                Warden, J. [@JesseWarden]. (2017, March 15). Drag, Spin, and Drop in Pixi.js. Youtube. https://www.youtube.com/watch?v=qszOcKGS1R4
+            </li>
+            <li>PixiJS API Documentation. (n.d.). Pixijs.Download. Retrieved December 16, 2023, from https://pixijs.download/dev/docs/index.html
+            </li>
+            <li>Dynamically resize the pixi stage and it’s contents on window resize and window load. (n.d.). Stack Overflow. Retrieved December 16, 2023, from https://stackoverflow.com/questions/30554533/dynamically-resize-the-pixi-stage-and-its-contents-on-window-resize-and-window
+            </li>
+            <li>
+                A better way to space out navigation bar items. (n.d.). Stack Overflow. Retrieved December 16, 2023, from https://stackoverflow.com/questions/42880090/a-better-way-to-space-out-navigation-bar-items
+            </li>
+        </ul>
+        </div>
+    </body>
+</html>

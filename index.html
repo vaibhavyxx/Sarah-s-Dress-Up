@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Game</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script>
+      //implementing here is the only way it works
+      WebFont.load({
+          google: {
+              families: ['Lilita One']
+          },
+          active:e=>{
+            //have to type something out in the console for the texts to properly load up
+              //console.log("");
+              // now start setting up your PixiJS (or canvas) stuff!
+          }
+      });
+  </script>
+   
+  </head>
+  <body>
+    <div id="page">
+    <ul id="nav">
+      <li><a href="about.html">About</a></li>
+      <li><a href="doc.html">Docs</a></li>
+      <li><a href="index.html">Game</a></li>
+  </ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.5.8/browser/pixi.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+
+    <h1>Sarah's Dress up!</h1>
+ <div id="intro">Choose Sarah's Outfits using drag and drop the clothes from her closet. Check what shoes would look good on her.</div>
+
+   <div id="game">
+    <!--Left Empty Intentionally for the Game to show up-->
+    <script src="classes.js"></script>
+    <script src="scene.js"></script>
+   </div>
+   </div>
+  </body>
+</html>
