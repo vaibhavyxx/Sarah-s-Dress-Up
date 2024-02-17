@@ -24,21 +24,16 @@ let itemVisible= false;
 let counter=0;
 
 //for storing music
-//let music;
-//these arrays help us in resetting the values
 let tops = [];
 let topPosition =[];
 let bottoms = []; 
-//let tops=[]; // don't use this always gives a console error
 let shoes=[];
 let hair=[];
-//let bob, blond;
-
 
 const backgroundMusic = new Howl({
   src: ['sounds/bg-music.wav'],
   loop: true, // Set to true if you want the music to loop
-  volume: 0.25, // Adjust the volume as needed (0 to 1)
+  volume: 0.5, 
 });
 const clickSound = new Howl({
   src: ['sounds/placeholder-click.flac'],
@@ -54,19 +49,19 @@ let hairPath = "images/hair/";
 
 loader.add("model", "images/model.png");
 loader.add("closet", "images/closet.png");
+
 //loads all the textures
 for(let i =1; i < 6; i++){
-  loader.add("hair"+ i.toString(), hairPath+ i.toString()+ ".png");
-  loader.add("bottom"+ i.toString(), bottomPath + i.toString()+ '.png');
-  loader.add("top"+ i.toString(), topPath + i.toString()+ '.png');
-  if(i <4){
-    loader.add("shoe"+ i.toString(), shoesPath + i.toString()+ '.png');
-  }
+  loader.add(`hair${i}`, `${hairPath}${i}.png`);
+    loader.add(`bottom${i}`, `${bottomPath}${i}.png`);
+    loader.add(`top${i}`, `${topPath}${i}.png`);
+    if (i < 4) {
+        loader.add(`shoe${i}`, `${shoesPath}${i}.png`);
+    }
 }
 let modelX = 600;
 let modelY= 50;
 scenes();
-//makeLabels();
 loader.load((loader, resources) => {
   topRow = 290;
   bottomRow =360;
